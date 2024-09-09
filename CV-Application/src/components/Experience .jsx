@@ -2,7 +2,7 @@ import React from 'react'
 import SectionForm from './SectionForm'
 
 
-const Education = () => {
+const Experience  = () => {
   return (
     <div>
       
@@ -10,4 +10,4 @@ const Education = () => {
   )
 }
 
-export default Education
+export default Experience 
