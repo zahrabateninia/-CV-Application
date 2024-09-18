@@ -9,8 +9,14 @@
     --white-background: #FFF
 }
 body{
+    
     background-color: var(--gray-background);
+    
 }
-.form-section{
+
+.app-container{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 3rem;
     padding: 2rem;
 }

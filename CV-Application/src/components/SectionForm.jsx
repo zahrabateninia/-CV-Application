@@ -1,5 +1,5 @@
 import {React, useState} from 'react'
-
+import '../styles/forms.css'
 
 const SectionForm = ({sectionTitle, initialValues, inputTypes}) => {
 
@@ -45,7 +45,7 @@ const SectionForm = ({sectionTitle, initialValues, inputTypes}) => {
                    />
               </div>
           ))}
-          <button type='submit'>Save</button>
+          <button className='save-btn' type='submit'>Save</button>
         </form>
     </>
         
@@ -60,7 +60,7 @@ const SectionForm = ({sectionTitle, initialValues, inputTypes}) => {
                 ))}
               </div>
              
-            <button onClick={handleEditClick}>Edit</button>
+            <button className='edit-btn' onClick={handleEditClick}>Edit</button>
             
         </>
 

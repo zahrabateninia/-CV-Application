@@ -22,7 +22,7 @@ const inputTypes = {
 const Experience  = () => {
   return (
 <SectionForm 
-        sectionTitle={<><FaBriefcase />Professional Experience</>}
+        sectionTitle={<><FaBriefcase className='form-icon' />Professional Experience</>}
         initialValues={initialValues}
         inputTypes={inputTypes}  
     />

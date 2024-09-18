@@ -20,7 +20,7 @@ const inputTypes = {
 const PersonalDetails = () => {
   return (
     <SectionForm 
-        sectionTitle={<><FaUser /> Personal Details</>}
+        sectionTitle={<><FaUser className='form-icon'/> Personal Details</>}
         initialValues={initialValues}
         inputTypes={inputTypes}  
     />
