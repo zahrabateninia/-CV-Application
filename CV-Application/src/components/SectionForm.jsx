@@ -1,11 +1,14 @@
-import React from 'react'
+import {React, useState} from 'react'
 
-const SectionForm = (sectionTitle, initialValues) => {
-  const [formData, setFormData] = useState(initialValues) // holds the data of form
+
+const SectionForm = ({sectionTitle, initialValues, inputTypes}) => {
+
+  const [formData, setFormData] = useState(initialValues)
   const [isEditing, setIsEditing] = useState(false)
 
   const handleFormSubmit = (e) =>{
     e.preventDefault()
+    setIsEditing(false) 
   } 
 
   // Handles input changes and updates formData state
@@ -25,12 +28,12 @@ const SectionForm = (sectionTitle, initialValues) => {
         <form onSubmit={ handleFormSubmit }>
           {Object.keys(initialValues).map((key) => (
               <div key={key} className="form-group">
-                  <label htmlFor="key">
+                  <label htmlFor={key}>
                       {/* Make the first letter of label capital and the rest of its letters will be attached to it */}
                       {key.charAt(0).toUpperCase() + key.slice(1)}
                   </label>
                   <input
-                   type={initialValues[key].type}
+                   type={inputTypes[key]}
                    id={key}
                    name={key}
                    value={formData[key]} 
@@ -53,7 +56,7 @@ const SectionForm = (sectionTitle, initialValues) => {
                 ))}
               </div>
              
-            <button onClick='handleEditClick'>Edit</button>
+            <button onClick={handleEditClick}>Edit</button>
             
         </>
 
