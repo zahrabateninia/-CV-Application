@@ -11,3 +11,6 @@
 body{
     background-color: var(--gray-background);
 }
+.form-section{
+    padding: 2rem;
+}

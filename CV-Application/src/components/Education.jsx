@@ -1,6 +1,6 @@
 import React from 'react'
 import SectionForm from './SectionForm'
-import {} from 'react-icons/fa'
+import {FaGraduationCap} from 'react-icons/fa'
 
 
 const initialValues = {
@@ -21,7 +21,7 @@ const inputTypes = {
 const Education = () => {
   return (
     <SectionForm 
-        sectionTitle={"Educational Experience"}
+        sectionTitle={<><FaGraduationCap />Educational Experience</>}
         initialValues={initialValues}
         inputTypes={inputTypes}  
     />

@@ -1,5 +1,6 @@
 import React from 'react'
 import SectionForm from './SectionForm'
+import { FaBriefcase } from 'react-icons/fa';
 
 
 const initialValues = {
@@ -21,7 +22,7 @@ const inputTypes = {
 const Experience  = () => {
   return (
 <SectionForm 
-        sectionTitle={"Professional Experience"}
+        sectionTitle={<><FaBriefcase />Professional Experience</>}
         initialValues={initialValues}
         inputTypes={inputTypes}  
     />
