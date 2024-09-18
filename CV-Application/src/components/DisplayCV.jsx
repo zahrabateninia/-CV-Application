@@ -2,8 +2,8 @@ import React from 'react'
 
 const DisplayCV = () => {
   return (
-    <div>
-      
+    <div className='cv-container'>
+
     </div>
   )
 }
