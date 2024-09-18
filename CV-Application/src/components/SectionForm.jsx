@@ -12,9 +12,13 @@ const SectionForm = ({sectionTitle, initialValues, inputTypes}) => {
   } 
 
   // Handles input changes and updates formData state
-  const handleChange = (e)=>{
-
-  }
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
   const handleEditClick = ()=>{
     setIsEditing(true) // set to edit mode
