@@ -3,6 +3,7 @@ import PersonalDetails from './components/PersonalDetails'
 import Education from './components/Education'
 import Experience from './components/Experience'
 import DisplayCV from './components/DisplayCV'
+import './styles/style.css'
 
 
 
