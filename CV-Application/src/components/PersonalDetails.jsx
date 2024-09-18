@@ -1,13 +1,19 @@
 import React from 'react'
 import SectionForm from './SectionForm'
 
-
- const initialValues = {
-  'full name': { value: '', type: 'text' },
-  'email': { value: '', type: 'email' },
-  'phone number': { value: '', type: 'tel' },
-  'city and province': { value: '', type: 'text' }
+const initialValues = {
+  'full name': '',
+  'email': '',
+  'phone number': '',
+  'city and province': ''
 };
+
+const inputTypes = {
+    'full name' : 'text',
+    'email' : 'email',
+    'phone number' : "tel",
+    'city and province' : ''
+}
 
 
 const PersonalDetails = () => {
@@ -15,7 +21,7 @@ const PersonalDetails = () => {
     <SectionForm 
         sectionTitle={"Personal Details"}
         initialValues={initialValues}
-        
+        inputTypes={inputTypes}  
     />
   )
 }
