@@ -3,6 +3,7 @@ import PersonalDetails from './components/PersonalDetails'
 import Education from './components/Education'
 import Experience from './components/Experience'
 import DisplayCV from './components/DisplayCV'
+import Footer from './components/Footer'
 import './styles/App.css'
 
 
@@ -16,6 +17,7 @@ const App = () => {
         <Experience />
       </div>
       <DisplayCV />
+      <Footer />
     </div>
   )
 }

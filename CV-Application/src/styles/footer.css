@@ -1,0 +1,22 @@
+footer{
+    text-align: center;
+    padding: 3px;
+    background-color: rgb(51, 47, 46);
+    color: white;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.4rem;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+footer a {
+    text-decoration: none;
+    color: beige;
+}

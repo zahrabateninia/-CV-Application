@@ -9,7 +9,7 @@
     display: flex;
     flex-flow: column wrap;
     width: 55rem;
-    height: 60rem;
+    height: 50rem;
     box-shadow: var(--gray-box-shadow);
     border-radius: .5rem;
     background-color: var(--white-background);
@@ -44,11 +44,10 @@ hr{
 
 
 .form-edu-info{
-    margin-left: 3rem;
-    margin-bottom: 2rem;
+    margin: .6rem 1rem 3rem 3rem;
+    
 }
 
 .form-pro-info{
-    margin-left: 3rem;
-    margin-bottom: 2rem;
+    margin: .6rem 1rem 3rem 3rem;
 }
