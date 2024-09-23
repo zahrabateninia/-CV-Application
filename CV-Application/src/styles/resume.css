@@ -6,9 +6,49 @@
 }
 
 .cv-container{
+    display: flex;
+    flex-flow: column wrap;
     width: 55rem;
     height: 60rem;
     box-shadow: var(--gray-box-shadow);
     border-radius: .5rem;
     background-color: var(--white-background);
+}
+
+.full-name{
+    align-self: center;
+}
+
+.cv-personal-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    padding: 2rem;
+}
+
+h4{
+    padding-left: 1.3rem;
+}
+
+hr{
+    border: 1px solid red;
+    margin: .2rem 1rem;
+}
+
+.personal-details{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+
+.form-edu-info{
+    margin-left: 3rem;
+    margin-bottom: 2rem;
+}
+
+.form-pro-info{
+    margin-left: 3rem;
+    margin-bottom: 2rem;
 }
