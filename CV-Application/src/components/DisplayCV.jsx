@@ -1,6 +1,7 @@
-import React from 'react'
+import {React, useState} from 'react'
 import '../styles/resume.css'
 
+// const [] = useState()
 const DisplayCV = () => {
   return (
     <div className='cv-container'>
