@@ -7,7 +7,7 @@ const DisplayCV = ({ personalDetails, educationalDetails, professionalDetails })
     <div className='cv-container'>
 
       <section className='cv-personal-info'>
-        <h3 className='full-name'>full name</h3>
+        <h3 className='full-name'>{personalDetails}</h3>
         <div className='personal-details'>
           <p className="email">email</p>
           <p className="phone">my phone</p>

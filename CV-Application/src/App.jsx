@@ -14,15 +14,31 @@ const App = () => {
   const [professionalDetails, setProfessionalDetails] = useState({})
   
   const handlePersonalDetailsChange = (formsData) => {
-
+    setPersonalDetails({
+      fullName: formsData['full name'],
+      email: formsData['email'],
+      phoneNumber: formsData['phone number'],
+      city: formsData['city and province']
+    })
   }
 
   const handleEducationalDetailsChange = (formsData) => {
-
+    setEducationalDetails({
+      degree: formsData['degree'],
+      school: formValues['school'],
+      startDate: formsData['start date'],
+      endDate: formsData['end date'],
+    })
   }
 
   const handleProfessionalDetailsChange = (formsData) => {
-
+    setProfessionalDetails({
+      jobTitle: formValues['job title'],
+      company: formValues['company'],
+      jobStartDate: formValues['start date'],
+      jobEndDate: formValues['end date'],
+      jobDescription: formValues['description']
+    });
   }
 
 
