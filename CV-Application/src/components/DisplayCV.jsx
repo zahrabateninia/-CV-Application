@@ -2,7 +2,7 @@ import {React, useState} from 'react'
 import '../styles/resume.css'
 
 // const [] = useState()
-const DisplayCV = () => {
+const DisplayCV = ({ personalDetails, educationalDetails, professionalDetails }) => {
   return (
     <div className='cv-container'>
 

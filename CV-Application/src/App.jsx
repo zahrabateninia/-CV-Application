@@ -9,14 +9,35 @@ import './styles/App.css'
 
 
 const App = () => {
+  const [personalDetails, setPersonalDetails] = useState({})
+  const [educationalDetails, setEducationalDetails] = useState({})
+  const [professionalDetails, setProfessionalDetails] = useState({})
+  
+  const handlePersonalDetailsChange = (formsData) => {
+
+  }
+
+  const handleEducationalDetailsChange = (formsData) => {
+
+  }
+
+  const handleProfessionalDetailsChange = (formsData) => {
+
+  }
+
+
   return (
     <div className='app-container'>
       <div className="forms-container">
-        <PersonalDetails />
-        <Education />
-        <Experience />
+        <PersonalDetails onFromChange={handlePersonalDetailsChange}/>
+        <Education onFromChange={handleEducationalDetailsChange}/>
+        <Experience onFromChange={handleProfessionalDetailsChange}/>
       </div>
-      <DisplayCV />
+      <DisplayCV
+        personalDetails={personalDetails}
+        educationalDetails={educationalDetails}
+        professionalDetails={professionalDetails}
+      />
       <Footer />
     </div>
   )
