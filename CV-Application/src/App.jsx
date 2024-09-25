@@ -13,25 +13,25 @@ const App = () => {
   const [educationalDetails, setEducationalDetails] = useState({})
   const [professionalDetails, setProfessionalDetails] = useState({})
   
-  const handlePersonalDetailsChange = (formsData) => {
+  const handlePersonalDetailsChange = (formValues) => {
     setPersonalDetails({
-      fullName: formsData['full name'],
-      email: formsData['email'],
-      phoneNumber: formsData['phone number'],
-      city: formsData['city and province']
+      fullName: formValues['full name'],
+      email: formValues['email'],
+      phoneNumber: formValues['phone number'],
+      city: formValues['city and province']
     })
   }
 
-  const handleEducationalDetailsChange = (formsData) => {
+  const handleEducationalDetailsChange = (formValues) => {
     setEducationalDetails({
-      degree: formsData['degree'],
-      school: formValues['school'],
-      startDate: formsData['start date'],
-      endDate: formsData['end date'],
+      degree: formValues['degree'],
+      school: formData['school'],
+      startDate: formValues['start date'],
+      endDate: formValues['end date'],
     })
   }
 
-  const handleProfessionalDetailsChange = (formsData) => {
+  const handleProfessionalDetailsChange = (formValues) => {
     setProfessionalDetails({
       jobTitle: formValues['job title'],
       company: formValues['company'],
