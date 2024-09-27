@@ -18,12 +18,13 @@ const inputTypes = {
 }
 
 
-const Education = () => {
+const Education = ( {onFormSubmit} ) => {
   return (
     <SectionForm 
         sectionTitle={<><FaGraduationCap className='form-icon'/>Educational Experience</>}
         initialValues={initialValues}
         inputTypes={inputTypes}  
+        onFormSubmit={onFormSubmit} 
     />
   )
 }

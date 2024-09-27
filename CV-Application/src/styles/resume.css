@@ -3,6 +3,8 @@
     --white-background: #FFF;
     --gray-box-shadow: rgba(50, 50, 93, 0.1) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.25) 0px 8px 16px -8px;
+    --dark-pink-color: rgb(217, 22, 86);
+    --purple-color: rgb(100, 13, 95);
 }
 
 .cv-container{
@@ -17,6 +19,7 @@
 
 .full-name{
     align-self: center;
+    color: var(--purple-color);
 }
 
 .cv-personal-info{
@@ -29,10 +32,11 @@
 
 h4{
     padding-left: 1.3rem;
+    color: var(--purple-color);
 }
 
 hr{
-    border: 1px solid red;
+    border: 1px solid var(--dark-pink-color);
     margin: .2rem 1rem;
 }
 

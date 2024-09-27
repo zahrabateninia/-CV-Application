@@ -1,15 +1,17 @@
-import {React, useState} from 'react'
-import '../styles/forms.css'
+import { React, useState } from 'react';
+import '../styles/forms.css';
 
-const SectionForm = ({sectionTitle, initialValues, inputTypes}) => {
+const SectionForm = ({ sectionTitle, initialValues, inputTypes, onFormSubmit }) => {
+  const [formData, setFormData] = useState(initialValues);
+  const [isEditing, setIsEditing] = useState(false);
 
-  const [formData, setFormData] = useState(initialValues)
-  const [isEditing, setIsEditing] = useState(false)
-
-  const handleFormSubmit = (e) =>{
-    e.preventDefault()
-    setIsEditing(false) 
-  } 
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    setIsEditing(false);
+    
+    // Call the onFormSubmit prop to pass the form data back to the parent
+    onFormSubmit(formData);
+  };
 
   // Handles input changes and updates formData state
   const handleChange = (e) => {
@@ -20,55 +22,49 @@ const SectionForm = ({sectionTitle, initialValues, inputTypes}) => {
     }));
   };
 
-  const handleEditClick = ()=>{
-    setIsEditing(true) // set to edit mode
-  }
+  const handleEditClick = () => {
+    setIsEditing(true); // set to edit mode
+  };
 
   return (
     <div className='form-section'>
-    { isEditing ? (
-    <>
-    <h2>{ sectionTitle }</h2>
-        <form onSubmit={ handleFormSubmit }>
-          {Object.keys(initialValues).map((key) => (
-              <div key={key} className="form-group">
-                  <label htmlFor={key}>
-                      {/* Make the first letter of label capital and the rest of its letters will be attached to it */}
-                      {key.charAt(0).toUpperCase() + key.slice(1)}
-                  </label>
-                  <input
-                   type={inputTypes[key]}
-                   id={key}
-                   name={key}
-                   value={formData[key]} 
-                   onChange={handleChange}
-                   />
-              </div>
-          ))}
-          <button className='save-btn' type='submit'>Save</button>
-        </form>
-    </>
-        
-    ): (
+      {isEditing ? (
         <>
-            {/* Display the data that was entered by the user */}
-              <div className='displayFormData'>
-                {Object.entries(formData).map(([key,value]) =>(
-                    <p key={key}>
-                        <strong>{key.charAt(0).toUpperCase() + key.slice(1)}:</strong> {value}
-                    </p>
-                ))}
+          <h2>{sectionTitle}</h2>
+          <form onSubmit={handleFormSubmit}>
+            {Object.keys(initialValues).map((key) => (
+              <div key={key} className="form-group">
+                <label htmlFor={key}>
+                  {/* Make the first letter of label capital and the rest of its letters will be attached to it */}
+                  {key.charAt(0).toUpperCase() + key.slice(1)}
+                </label>
+                <input
+                  type={inputTypes[key]}
+                  id={key}
+                  name={key}
+                  value={formData[key]} 
+                  onChange={handleChange}
+                />
               </div>
-             
-            <button className='edit-btn' onClick={handleEditClick}>Edit</button>
-            
+            ))}
+            <button className='save-btn' type='submit'>Save</button>
+          </form>
         </>
-
-    )
-    
-    } 
+      ) : (
+        <>
+          {/* Display the data that was entered by the user */}
+          <div className='displayFormData'>
+            {Object.entries(formData).map(([key, value]) => (
+              <p key={key}>
+                <strong>{key.charAt(0).toUpperCase() + key.slice(1)}:</strong> {value}
+              </p>
+            ))}
+          </div>
+          <button className='edit-btn' onClick={handleEditClick}>Edit</button>
+        </>
+      )}
     </div>
-  )
+  );
 }
 
-export default SectionForm
+export default SectionForm;

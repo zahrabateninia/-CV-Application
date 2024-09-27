@@ -25,11 +25,12 @@ const App = () => {
   const handleEducationalDetailsChange = (formValues) => {
     setEducationalDetails({
       degree: formValues['degree'],
-      school: formData['school'],
+      school: formValues['school'],
       startDate: formValues['start date'],
       endDate: formValues['end date'],
     })
   }
+
 
   const handleProfessionalDetailsChange = (formValues) => {
     setProfessionalDetails({
@@ -45,9 +46,9 @@ const App = () => {
   return (
     <div className='app-container'>
       <div className="forms-container">
-        <PersonalDetails onFromChange={handlePersonalDetailsChange}/>
-        <Education onFromChange={handleEducationalDetailsChange}/>
-        <Experience onFromChange={handleProfessionalDetailsChange}/>
+        <PersonalDetails onFormSubmit={handlePersonalDetailsChange}/>
+        <Education onFormSubmit={handleEducationalDetailsChange}/>
+        <Experience onFormSubmit={handleProfessionalDetailsChange}/>
       </div>
       <DisplayCV
         personalDetails={personalDetails}

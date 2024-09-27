@@ -19,14 +19,15 @@ const inputTypes = {
   'description':'text'
 }
 
-const Experience  = () => {
+const Experience  = ( {onFormSubmit} ) => {
   return (
-<SectionForm 
-        sectionTitle={<><FaBriefcase className='form-icon' />Professional Experience</>}
-        initialValues={initialValues}
-        inputTypes={inputTypes}  
-    />
-  )
+    <SectionForm 
+            sectionTitle={<><FaBriefcase className='form-icon' />Professional Experience</>}
+            initialValues={initialValues}
+            inputTypes={inputTypes}  
+            onFormSubmit={onFormSubmit} 
+        />
+      )
 }
 
 export default Experience 
