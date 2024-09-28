@@ -26,6 +26,13 @@ const SectionForm = ({ sectionTitle, initialValues, inputTypes, onFormSubmit }) 
     setIsEditing(true); // set to edit mode
   };
 
+  const handleCancelClick = (e) => {
+    e.preventDefault();
+    setFormData(initialValues);
+    setIsEditing(false);
+
+  }
+
   return (
     <div className='form-section'>
       {isEditing ? (
@@ -44,10 +51,14 @@ const SectionForm = ({ sectionTitle, initialValues, inputTypes, onFormSubmit }) 
                   name={key}
                   value={formData[key]} 
                   onChange={handleChange}
+                  required
                 />
               </div>
             ))}
-            <button className='save-btn' type='submit'>Save</button>
+            <div className="form-buttons">
+                <button className="cancel-btn" onClick={handleCancelClick}>Cancel</button>
+                <button className='save-btn' type='submit'>Save</button>
+            </div>
           </form>
         </>
       ) : (

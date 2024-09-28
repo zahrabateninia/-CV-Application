@@ -28,12 +28,31 @@
     justify-content: center;
     align-self: center;
     padding: 2rem;
+    width: 100%;
+    background-color: var(--purple-color);
+    margin-bottom: 1rem;
+}
+
+h3{
+    font-size: 1.5rem;
 }
 
 h4{
     padding-left: 1.3rem;
     color: var(--purple-color);
+    font-size: 1.2rem;
 }
+
+.personal-details > p{
+    font-size: 1.1rem;
+}
+
+.form-edu-info > p,
+.form-pro-info > p{
+    font-size: 1.2rem;
+}
+
+
 
 hr{
     border: 1px solid var(--dark-pink-color);
@@ -70,4 +89,9 @@ hr{
 .job-start-date::after,
 .edu-start-date::after{
     content: " -";
+}
+
+.job-description{
+    font-size: 1rem;
+    color: gray;
 }
