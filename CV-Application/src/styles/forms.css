@@ -52,8 +52,18 @@ h2{
 
 .cancel-btn{
     flex: 1;
+    background-color: var(--light-blue-color);
+    color: white;
 }
 
+.save-btn{
+    background-color: var(--orange-color);
+    color: white;
+}
+
+.edit-btn{
+    background-color: var(--light-orange-color);
+}
 strong{
     margin-right: 5px;
 }

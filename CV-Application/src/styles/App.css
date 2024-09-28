@@ -5,8 +5,10 @@
 }
 
 :root{
-    --gray-background: #eaecf2;
-    --white-background: #FFF
+    --gray-background: rgb(239, 236, 236);
+    --white-background: #FFF;
+    --light-blue-color: rgb(157, 189, 255);
+    --light-orange-color: rgb(255, 215, 196);
 }
 body{
     
