@@ -1,9 +1,9 @@
 import { React, useState } from 'react';
 import '../styles/forms.css';
 
-const SectionForm = ({ sectionTitle, initialValues, inputTypes, onFormSubmit }) => {
+const SectionForm = ({ sectionTitle, initialValues, inputTypes, onFormSubmit, startEditing}) => {
   const [formData, setFormData] = useState(initialValues);
-  const [isEditing, setIsEditing] = useState(false);
+  const [isEditing, setIsEditing] = useState(startEditing);
 
   const handleFormSubmit = (e) => {
     e.preventDefault();

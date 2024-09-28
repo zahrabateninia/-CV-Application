@@ -47,6 +47,7 @@ const App = () => {
     <div className='app-container'>
       <div className="forms-container">
         <PersonalDetails onFormSubmit={handlePersonalDetailsChange}/>
+        
         <Education onFormSubmit={handleEducationalDetailsChange}/>
         <Experience onFormSubmit={handleProfessionalDetailsChange}/>
       </div>
@@ -65,7 +66,7 @@ export default App
 
 // Note to myself:
 
-// Lifting the State Up: 
+// Lifting the State Up:
 // Sharing the form data on the CV report lies in lifting the state. This means storing the form data at a higher level in the component tree 
 // (App.jsx component) and passing that data down as props to the components that need it
 

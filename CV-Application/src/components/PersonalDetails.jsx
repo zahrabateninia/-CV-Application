@@ -23,6 +23,7 @@ const PersonalDetails = ({ onFormSubmit }) => {
       initialValues={initialValues}
       inputTypes={inputTypes}
       onFormSubmit={onFormSubmit}  
+      startEditing={true} // so the first time rendering the page the form will be displayed for personal details section
     />
   );
 };
