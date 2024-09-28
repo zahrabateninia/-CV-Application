@@ -1,5 +1,7 @@
-import {React, useState} from 'react'
+import {React} from 'react'
 import '../styles/resume.css'
+import { FaEnvelope, FaPhone, FaMapPin} from 'react-icons/fa'
+
 
 
 const DisplayCV = ({ personalDetails, educationalDetails, professionalDetails }) => {
@@ -15,9 +17,18 @@ const DisplayCV = ({ personalDetails, educationalDetails, professionalDetails })
       <section className='cv-personal-info'>
         <h3 className='full-name'>{personalDetails.fullName || 'Full Name'}</h3>
         <div className='personal-details'>
-          <p className="email">{personalDetails.email || 'Email'}</p>
-          <p className="phone">{personalDetails.phoneNumber || 'Phone Number'}</p>
-          <p className="city">{personalDetails.city || 'City'}</p>
+          <div className="detail-item">
+            <FaEnvelope className='cv-report-icon'/>
+            <p className="email">{personalDetails.email || 'Email'}</p>
+          </div>
+          <div className="detail-item">
+            <FaPhone className='cv-report-icon'/>
+            <p className="phone">{personalDetails.phoneNumber || 'Phone Number'}</p>
+          </div>
+          <div className="detail-item">
+            <FaMapPin className='cv-report-icon'/>
+            <p className="city">{personalDetails.city || 'City'}</p>
+          </div>
         </div>
       </section>
 

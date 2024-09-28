@@ -62,9 +62,25 @@ hr{
 .personal-details{
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 2rem;
 }
 
+.detail-item {
+    display: flex;
+    align-items: center; 
+    gap: 0.5rem; 
+}
+
+.detail-item p{
+    color: var(--light-orange-color);
+    font-size: 1.2rem;
+}
+
+.cv-report-icon {
+    font-size: 1.2rem;
+    color: var(--orange-color); 
+}
 
 .form-edu-info{
     padding:  1rem 2rem;
@@ -95,3 +111,4 @@ hr{
     font-size: 1rem;
     color: gray;
 }
+
