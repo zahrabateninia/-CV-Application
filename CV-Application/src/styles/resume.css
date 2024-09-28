@@ -48,10 +48,26 @@ hr{
 
 
 .form-edu-info{
-    margin: .6rem 1rem 3rem 3rem;
+    padding:  1rem 2rem;
     
 }
 
 .form-pro-info{
-    margin: .6rem 1rem 3rem 3rem;
+    padding:  1rem 2rem;
+}
+
+.dates{
+    display: flex;
+    color: rgb(128, 121, 121);
+    justify-content: flex-end;
+}
+
+.job-start-date,
+.edu-start-date{
+    margin-right: 5px;
+}
+
+.job-start-date::after,
+.edu-start-date::after{
+    content: " -";
 }

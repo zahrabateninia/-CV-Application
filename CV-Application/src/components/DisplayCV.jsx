@@ -3,6 +3,13 @@ import '../styles/resume.css'
 
 
 const DisplayCV = ({ personalDetails, educationalDetails, professionalDetails }) => {
+
+  const formatDate = (dateStr) =>{
+    const date = new Date(dateStr)
+    return date.toLocaleDateString('en-US', {year: 'numeric', month:'short'})
+
+  }
+
   return (
     <div className='cv-container'>
       <section className='cv-personal-info'>
@@ -20,8 +27,14 @@ const DisplayCV = ({ personalDetails, educationalDetails, professionalDetails })
         <div className='form-edu-info'>
           <p className='degree'>{educationalDetails.degree || 'Degree'}</p>
           <p className='school'>{educationalDetails.school || 'School'}</p>
-          <p className='date'>{educationalDetails.startDate || 'Start Date'}</p>
-          <p className='date'>{educationalDetails.endDate || 'End Date'}</p>
+          <div className="dates">
+            <p className='edu-start-date'>{
+            educationalDetails.startDate === 'true' ? formatDate(educationalDetails.startDate) : 'Aug 2020'}
+            </p>
+            <p className='edu-end-date'>{
+            educationalDetails.endDate === "true" ? formatDate(educationalDetails.endDate) : 'Nov 2024'}
+            </p>
+          </div>
         </div>
       </section>
 
@@ -31,9 +44,15 @@ const DisplayCV = ({ personalDetails, educationalDetails, professionalDetails })
         <div className='form-pro-info'>
           <p className='job-title'>{professionalDetails.jobTitle || 'Job Title'}</p>
           <p className="company">{professionalDetails.company || 'Company'}</p>
-          <p className="job-date">{professionalDetails.jobStartDate || 'Job Start Date'}</p>
-          <p className="job-date">{professionalDetails.jobEndDate || 'Job End Date'}</p>
-          <p className="job-description">{professionalDetails.jobDescription || 'Job Description'}</p>
+          <div className="dates">
+          <p className="job-start-date">{
+          professionalDetails.jobStartDate === 'true' ? formatDate(professionalDetails.jobStartDate) : 'Sep 2023'}</p>
+          <p className="job-end-date">{professionalDetails.jobEndDate === 'true' ? formatDate(professionalDetails.jobEndDate ) : 'Sep 2024'}
+          </p>
+          </div>
+          <p className="job-description">{
+          professionalDetails.jobDescription || 'Job Description'}
+          </p>
         </div>
       </section>
     </div>
