@@ -61,3 +61,12 @@ const App = () => {
 }
 
 export default App
+
+
+// Note to myself:
+
+// Lifting the State Up: 
+// Sharing the form data on the CV report lies in lifting the state. This means storing the form data at a higher level in the component tree 
+// (App.jsx component) and passing that data down as props to the components that need it
+
+// The DisplayCV component receives the most up-to-date form data every time a form is submitted
