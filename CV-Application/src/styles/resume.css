@@ -14,6 +14,7 @@
     height: 50rem;
     box-shadow: var(--gray-box-shadow);
     background-color: var(--white-background);
+    margin-top: 2rem;
 }
 
 .full-name{
