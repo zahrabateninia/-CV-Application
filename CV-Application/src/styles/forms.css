@@ -1,3 +1,22 @@
+/* forms-section = download button + all forms */
+.forms-section{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.forms-section .save-cv-btn{
+    color: var(--orange-color);
+    display: flex;
+    gap: .7rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    position: sticky;
+    top: 0;
+    margin-bottom: 1rem;
+}
+
 .forms-container{
     display: flex;
     gap: 4rem;

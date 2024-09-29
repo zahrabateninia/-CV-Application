@@ -11,10 +11,11 @@
     display: flex;
     flex-flow: column wrap;
     width: 55rem;
-    height: 50rem;
+    height: 57rem;
     box-shadow: var(--gray-box-shadow);
     background-color: var(--white-background);
     margin-top: 2rem;
+    margin-bottom: 4rem;
 }
 
 .full-name{

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import SaveCVAsPdf from './components/SaveCVAsPdf'
 import PersonalDetails from './components/PersonalDetails'
 import Education from './components/Education'
 import Experience from './components/Experience'
@@ -41,15 +42,17 @@ const App = () => {
       jobDescription: formValues['description']
     });
   }
-
+  <SaveCVAsPdf />
 
   return (
     <div className='app-container'>
-      <div className="forms-container">
-        <PersonalDetails onFormSubmit={handlePersonalDetailsChange}/>
-        
-        <Education onFormSubmit={handleEducationalDetailsChange}/>
-        <Experience onFormSubmit={handleProfessionalDetailsChange}/>
+      <div className="forms-section">
+        <SaveCVAsPdf />
+        <div className="forms-container">
+          <PersonalDetails onFormSubmit={handlePersonalDetailsChange}/>
+          <Education onFormSubmit={handleEducationalDetailsChange}/>
+          <Experience onFormSubmit={handleProfessionalDetailsChange}/>
+        </div>
       </div>
       <DisplayCV
         personalDetails={personalDetails}
