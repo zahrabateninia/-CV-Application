@@ -33,7 +33,6 @@ const SectionForm = ({ sectionTitle, initialValues, inputTypes, onFormSubmit, st
 
   const handleCancelClick = (e) => {
     e.preventDefault();
-    setFormData(initialValues);
     setIsEditing(false);
   };
 
