@@ -87,3 +87,25 @@ h2{
 strong{
     margin-right: 5px;
 }
+
+.empty-form-box {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 4px 25px -6px;
+    background-color: white;
+    border-radius: 6px;
+    padding: 1rem;
+  }
+  
+  .empty-form-box:hover {
+    background-color: var(--light-orange-color);
+  }
+
+  .empty-form-box p{
+    color: gray;
+  }
