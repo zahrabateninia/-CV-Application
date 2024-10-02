@@ -47,16 +47,30 @@ const SectionForm = ({ sectionTitle, initialValues, inputTypes, onFormSubmit, st
               <label htmlFor={key}>
                 {key.charAt(0).toUpperCase() + key.slice(1)}
               </label>
-              <input
-                type={inputTypes[key]}
-                id={key}
-                name={key}
-                value={formData[key]}
-                onChange={handleChange}
-                required
-              />
-            </div>
-          ))}
+              {key === 'description' ? (
+              // Render a <textarea> for the description field
+                <textarea
+                  id={key}
+                  name={key}
+                  value={formData[key]}
+                  onChange={handleChange}
+                  rows={5} 
+                  placeholder="Enter your description"
+                  required
+                />
+              ) : (
+                // Render a normal input field for all other fields
+                <input
+                  type={inputTypes[key]}
+                  id={key}
+                  name={key}
+                  value={formData[key]}
+                  onChange={handleChange}
+                  required
+                />
+              )}
+          </div>
+        ))}
           <div className="form-buttons">
             <button className="cancel-btn" onClick={handleCancelClick}>
               Cancel

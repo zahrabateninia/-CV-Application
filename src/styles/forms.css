@@ -53,6 +53,17 @@ form{
    
 }
 
+.form-group textarea{
+    padding: 3px;
+    border: none;
+    font-size: 1rem;
+    padding: .5rem;
+    margin-top: 4px;
+    border-radius: 5px;
+    max-width: 24rem;
+    max-height: 8rem;
+}
+
 h2{
     display: flex;
     justify-content: center;
