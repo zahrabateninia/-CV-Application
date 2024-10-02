@@ -3,6 +3,9 @@
 ## Description
 CV Application is a React-based web app designed to help users easily create a basic CV. It allows users to input personal information, education, and work experience, which is then dynamically rendered as a CV preview. Users can also export their CV as a PDF using the `jsPDF` and `html2Canvas` libraries. The project is built using `Vite` for fast builds and includes icons from `React Icons` with FontAwesome integration for a modern look.
 
+
+## Demo
+ [https://my-cool-cv-app.netlify.app/](https://my-cool-cv-app.netlify.app/)
 ## Features
 - **Dynamic CV Creation:** Input and display key personal, educational, and professional details in a structured format.
 - **PDF Export:** Generate a downloadable PDF version of your CV with a single click.
